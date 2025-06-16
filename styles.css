@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Inter:wght@300&display=swap');
+
+:root {
+  --background: #191724;
+  --text: #e0def4;
+  --subtext: #908caa;
+  --border: #2a273f;
+  --font-main: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-main);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.profile__image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.profile__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+  line-height: 1.2;
+}
+
+.profile__tagline {
+  font-size: 1rem;
+  color: var(--subtext);
+  margin: 0.25rem 0;
+  line-height: 1.2;
+}
+
+.profile__location {
+  font-size: 0.9rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0.25rem 0;
+  line-height: 1.2;
+}
+
+.profile__location svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: var(--text);
+  stroke-width: 1.2;
+  fill: none;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.social__link {
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.social__link:hover {
+  background-color: var(--border);
+}
+
+@media (max-width: 480px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
